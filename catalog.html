@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8" >
+    <meta content="width=device-width, initial-scale=1.0" >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" >
     <title>Каталог</title>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="top-bar">
+      <div class="header-top">
+        <h2 hidden>Top header bar</h2>
+        <a href="index.html">
           <img
-            src="img/placeholder.jpeg"
-            width="220px"
-            height="47px"
-            alt="Техномарт"
+            src="img/logo.jpeg"
+            width="220"
+            height="47"
+            alt="Логотип Техномарт"
           />
-          <p>
-            <svg></svg>
-            <input type="search" placeholder="Поиск:" />
-          </p>
-          <p>
-            <svg></svg>
-            Закладки: 0
-          </p>
-          <p>
-            <svg></svg>
-            Корзина: 10
-          </p>
-          <p class="submit">
-            <button type="button">Оформить заказ</button>
-          </p>
+        </a>
+        <form >
+          <input type="search" placeholder="Поиск:" >
+        </form>
+        <div class=widget>
+          <svg></svg>
+          <p>Закладки: 0</p> 
+        </div>
+        <div class=widget>
+          <svg></svg>
+          <p>Корзина: 10</p> 
         </div>
 
-        <p class="description">
-          Интернет-магазин <br />строительных материалов <br />и инструмент для
+        <a href="basket.html">Оформить заказ</a>        
+
+      </div>
+
+      <div class="header-middle">
+        <h1>
+          Интернет-магазин строительных материалов и инструмент для
           ремонта
-        </p>
+        </h1>
 
-        <div>
-          <div class="header-phone">
-            <svg></svg>
-            <a href="tel:+7-812-555-05-55">+7(812) 555-05-55</a>
-          </div>
-
+        <div class="header-contacts">
+          <svg></svg>
+          <a href="tel:+7-812-555-05-55">+7(812) 555-05-55</a>
           <address>
             <a href="https://yandex.ru/maps/-/CKE5J8nr">
               г. Санкт-Петербург, ул. Б. Конюшенская, д. 19/8
@@ -51,22 +50,21 @@
           </address>
         </div>
 
-        <div class="login">
-          <div>
-            <svg></svg>
-            <button type="button">Равшан Джамшутович</button>
-            <a href=""><svg></svg>exit</a>
-          </div>
-          <div>
+        <div class="login">          
+            <button class="sign-out" type="button">
+              <svg></svg>
+              Равшан Джамшутович
+              <svg></svg>
+            </button>
+            
             <ul>
               <li><button type="button">Мои заказы</button></li>
               <li><button type="button">Личный кабинет</button></li>
             </ul>
           </div>
-        </div>
 
-        <section class="nav-bar">
-          <ul>
+      <nav class="navbar">
+          <ul class="nav" >
             <li>
               <a href="index.html">
                 Главная
@@ -103,29 +101,13 @@
               </a>
             </li>
           </ul>
-        </section>
       </nav>
     </header>
 
-    <main>
-      <section class="catalog-bar">
-        <ul>
-          <li>
-            <a href="index.html">КАТАЛОГ</a>
-          </li>
-          <li>
-            <a href="">ИНСТРУМЕНТ</a>
-          </li>
-          <li>
-            <a href="">ПЕРФОРАТОРЫ</a>
-          </li>
-        </ul>
-      </section>
-      <h1>
-        Перфораторы
-      </h1>
 
-      <form class="filtes">
+    <aside>
+      
+      <form class="filters">
         <h2>ПРОИЗВОДИТЕЛИ</h2>
         <div>
           <input type="checkbox" id="BOSCH" />
@@ -159,6 +141,25 @@
         </div>
         <button type="submit">ПОКАЗАТЬ</button>
       </form>
+    </aside>
+
+    <main>
+      <h1>
+        Перфораторы
+      </h1>
+      <!--хлебные крошки просто в списке-->
+        <ul>
+          <li>
+            <a href="index.html">КАТАЛОГ</a>
+          </li>
+          <li>
+            <a href="tools.html">ИНСТРУМЕНТ</a>
+          </li>
+          <li>
+            <a href="perforators.html">ПЕРФОРАТОРЫ</a>
+          </li>
+        </ul>
+
 
       <section class="products">
         <table>
@@ -168,8 +169,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 3000</figcaption>
@@ -185,8 +186,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
@@ -201,8 +202,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 2000</figcaption>
@@ -218,8 +219,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 3000</figcaption>
@@ -235,8 +236,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
@@ -251,8 +252,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 2000</figcaption>
@@ -268,8 +269,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 3000</figcaption>
@@ -285,8 +286,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 6000</figcaption>
@@ -301,8 +302,8 @@
                 <figure>
                   <img
                     src="palceholder.img"
-                    width="218px"
-                    height="170px"
+                    width="218"
+                    height="170"
                     alt="Перфоратор BOSCH"
                   />
                   <figcaption>Перфоратор BOSCH BFG 2000</figcaption>
@@ -345,14 +346,10 @@
     </main>
 
     <footer>
-      <img
-        src="img/placeholder.jpeg"
-        width="220px"
-        height="68px"
-        alt="Техномарт"
-      />
-
-      <div>
+      <div class="footer-upper" >
+        <a href="index.html">
+          <img src="img/logo.jpeg" width="220" height="68" alt="Логотип Техномарт">
+        </a>
         <ul>
           <li>
             <a href="#company">
@@ -378,47 +375,45 @@
             <a href="#contacts">
               Контакты
             </a>
-          </li>
+          </li>  
         </ul>
-
-        <div>
-          <ul>
-            <li>
-              <a href="">
-                Материалы
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Техника
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Инструмент
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Спецпредложения
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
-
-      <div>
+ 
+      <div class="footer-middle">
         <address>
           <a href="https://yandex.ru/maps/-/CKE5J8nr">
             г. Санкт-Петербург, ул. Б. Конюшенская, д. 19/8
           </a>
         </address>
         <a href="tel:+7-812-555-05-55">+7-812-555-05-55</a>
+        <ul>
+          <li>
+            <a href="">
+              Материалы
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Техника
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Инструмент
+             </a>
+          </li>
+          <li>
+            <a href="">
+              Спецпредложения
+            </a>
+          </li>
+         </ul>   
       </div>
+
       <div>
+    
+      <div class="footer-bottom">
         <p>© 2010-2019 Компания "Техномарт"<br />Все права защищены</p>
-      </div>
-      <div>
         <ul>
           <li>
             <a href="https://vk.com/htmlacademy" title="Группа ВК">
@@ -454,8 +449,6 @@
             </a>
           </li>
         </ul>
-      </div>
-      <div>
         <p>
           Обратная связь:
           <a href="mailto:mail@htmlacademy.ru?Subject=Hello&Kitty">
