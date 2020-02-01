@@ -19,7 +19,7 @@
         </a>
         <form class="search" >
           <img class="icon-search" src="img/icons/icon-search.svg">
-          <input type="search" placeholder="Поиск:" >      
+          <input type="search" name="search" placeholder="Поиск:" >      
         </form>
         <div class="widgets">
           <ul>
@@ -285,15 +285,15 @@
         <ul>
           <li>
             <label for="name">Ваше имя:</label>
-            <input id="name" type="text" placeholder="Имя Фамилия" />
+            <input id="name" name="name" type="text" placeholder="Имя Фамилия" />
           </li>
           <li>
             <label for="mail">Ваш e-mail:</label>
-            <input id="mail" type="email" placeholder="email@example.com" />
+            <input id="mail" name="email" type="email" placeholder="email@example.com" />
           </li>
           <li>
             <label for="text">Текст письма:</label>
-            <input id="text" type="text" placeholder="В свободной форме" />
+            <input id="text" name="text" type="text" placeholder="В свободной форме" />
           </li>
         </ul>
         <button type="submit">Отправить</button>
