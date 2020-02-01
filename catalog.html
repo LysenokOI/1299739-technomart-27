@@ -114,38 +114,50 @@
     <aside>
       
       <form class="filters" method="get">
-        <h2>ПРОИЗВОДИТЕЛИ</h2>
-        <div>
-          <input type="checkbox" id="bosch" />
-          <label for="bosch">BOSCH</label>
-        </div>
-        <div>
-          <input type="checkbox" id="interscol" />
-          <label for="interscol">ИНТЕРСКОЛ</label>
-        </div>
-        <div>
-          <input type="checkbox" id="makita" />
-          <label for="makita">MAKITA</label>
-        </div>
-        <div>
-          <input type="checkbox" id="dewalt" />
-          <label for="dewalt">DEWALT</label>
-        </div>
-        <div>
-          <input type="checkbox" id="hitachi" />
-          <label for="hitachi">HITACHI</label>
-        </div>
+        <fieldset>
+          <legend>
+            Производители
+          </legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="bosch" />
+              <label for="bosch">BOSCH</label>
+            </li>
+            <li>
+              <input type="checkbox" id="interscol" />
+              <label for="interscol">ИНТЕРСКОЛ</label>
+            </li>
+            <li>
+              <input type="checkbox" id="makita" />
+              <label for="makita">MAKITA</label>
+            </li>
+            <li>
+              <input type="checkbox" id="dewalt" />
+              <label for="dewalt">DEWALT</label>
+            </li>
+            <li>
+              <input type="checkbox" id="hitachi" />
+              <label for="hitachi">HITACHI</label>
+            </li>
+          </ul>
+        </fieldset>
 
-        <h2>ПИТАНИЕ:</h2>
-        <div>
-          <input type="checkbox" id="accumulator" />
-          <label for="accumulator">АККУМУЛЯТОРНЫЕ</label>
-        </div>
-        <div>
-          <input type="checkbox" id="network" />
-          <label for="network">СЕТЕВЫЕ</label>
-        </div>
-        <button type="submit">ПОКАЗАТЬ</button>
+        <fieldset>
+          <legend>
+            Питание
+          </legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="accumulator" />
+              <label for="accumulator">АККУМУЛЯТОРНЫЕ</label>
+            </li>
+            <li>
+              <input type="checkbox" id="network" />
+              <label for="network">СЕТЕВЫЕ</label>
+            </li>
+          </ul>      
+        </fieldset>
+        <button type="submit">ПОКАЗАТЬ</button>    
       </form>
     </aside>
 
@@ -168,7 +180,7 @@
 
 
       <section class="products">
-        <h2 hidden>Catalog</h2>
+        <h2 visually-hidden>Каталог</h2>
         <ul>
           <li class="product-item">
             <img
