@@ -58,14 +58,14 @@
         <div class="user">
           <ul>
             <li>
-              <button class="sign-in" type="button" >
+              <a class="sign-in" href="signin.html" >
                   <img src="img/icons/icon-login.svg">
                   Войти
-              </button>
+              </a>
             </li>
-              <button class="sign-up" type="button" >
+              <a class="sign-up" href="signup.html" >
                 Регистрация
-               </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -160,8 +160,12 @@
       <section>
         <h2 id="contacts">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a href="https://yandex.ru/maps/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;width=300&amp;height=158&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
-        <a href="">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
+        <a href="https://yandex.ru/maps/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;source=constructorStatic" target="_blank">
+          <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;width=300&amp;height=158&amp;lang=ru_RU" 
+          alt="Адрес компании г. Санкт-Петербург, ул. Б. Конюшенская, д. 19/8" 
+          style="border: 0;" />
+        </a>
+        <a href="#feedback-modal">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
       </section>
     </main>
 
@@ -269,5 +273,35 @@
         </p>
       </div>
     </footer>
+    <div id="feedback-modal">
+      <div class="map-modal">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A64896c265c43cf5536f359c263f7326f58571a2e2c4b075f2bd16aa97d7f4c12&amp;source=constructor" width="940" height="446" frameborder="0"></iframe>
+        <button type="button">
+          <img src="/img/icons/modal-close.svg" alt="close">
+        </button>
+      </div>
+
+      <form action="" method="post">
+        <ul>
+          <li>
+            <label for="name">Ваше имя:</label>
+            <input id="name" type="text" placeholder="Имя Фамилия" />
+          </li>
+          <li>
+            <label for="mail">Ваш e-mail:</label>
+            <input id="mail" type="email" placeholder="email@example.com" />
+          </li>
+          <li>
+            <label for="text">Текст письма:</label>
+            <input id="text" type="text" placeholder="В свободной форме" />
+          </li>
+        </ul>
+        <button type="submit">Отправить</button>
+        <button type="button">
+          <img src="/img/icons/modal-close.svg" alt="close">
+        </button>
+      </form>
+    </div>
+
   </body>
 </html>

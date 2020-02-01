@@ -27,8 +27,10 @@
               <p>Закладки: 0</p>
             </li>
             <li class="cart">
-              <img src="img/icons/cart-icon.svg">
-              <p>Корзина: 10</p> 
+              <a href="#cart">
+                <img src="img/icons/cart-icon.svg">
+                <p>Корзина: 10</p>
+              </a>
             </li>
           </ul>
 
@@ -111,7 +113,7 @@
 
     <aside>
       
-      <form class="filters">
+      <form class="filters" method="get">
         <h2>ПРОИЗВОДИТЕЛИ</h2>
         <div>
           <input type="checkbox" id="bosch" />
@@ -268,33 +270,30 @@
               <p class="product-price">12500</p>
           </li>
         </ul>
+              
+        <ul class="nav-product">
+          <li class="page">
+            <button  type="button">
+              1
+            </button>
+          </li>
+          <li class="page">
+            <button  type="button">
+              2
+            </button>
+          </li>
+          <li class="page">
+            <button  type="button">
+              3
+            </button>
+          </li>
+          <li class="page">
+            <button  type="button">
+              следующая
+            </button>
+          </li> 
+         </ul>
          
-         <!--
-         <div class="nav-products">
-           <ul>
-             <li>
-               <div class="page" >
-                 1
-               </div>
-             </li>
-             <li>
-              <div class="page" >
-                2
-              </div>
-            </li>
-            <li>
-              <div class="page" >
-                3
-              </div>
-            </li>
-            <li>
-              <div class="next" >
-                СЛЕДУЮЩАЯ
-              </div>
-            </li>
-           </ul>
-         </div>
-         -->
 
       </section>
     </main>
@@ -381,5 +380,22 @@
         </p>
       </div>
     </footer>
+
+    <div id="basket" class="basket-modal">
+      <img src="/img/icons/modal-check.svg">
+      <p>Товар добавлен в корзину!</p>
+      
+      <div class="footer-modal">
+        <a href="#">
+          Оформить заказ
+        </a>
+        <button type="button">
+          Продолжить покупки
+        </button>
+      </div>
+      <button type="button">
+        <img src="/img/icons/modal-close.svg" alt="close">
+      </button>
+    </div>
   </body>
 </html>
