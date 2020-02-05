@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" >
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Техномарт</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <!--<link rel="stylesheet" href="css/style.css">-->
   </head>
   <body>
-    <header>
+    <header class="top">
       <div class="header-top">
         <a class="logo-top" href="index.html">
-          <img 
+          <img
             src="img/icons/logo.svg"
             width="220"
             height="47"
             alt="Логотип Техномарт"
-          >
+          />
         </a>
-        <form class="search" >
-          <img class="icon-search" src="img/icons/icon-search.svg">
-          <input type="search" name="search" placeholder="Поиск:" >      
+        <form class="search">
+          <img class="icon-search" src="img/icons/icon-search.svg" />
+          <input type="search" name="search" placeholder="Поиск:" />
         </form>
         <div class="widgets">
           <ul>
             <li class="bookmark">
-              <img src="img/icons/icon-bookmark.svg" >
+              <img src="img/icons/icon-bookmark.svg" />
               <p>Закладки: 0</p>
             </li>
             <li class="cart">
-              <img src="img/icons/cart-icon.svg">
-              <p>Корзина: 10</p> 
+              <img src="img/icons/cart-icon.svg" />
+              <p>Корзина: 10</p>
             </li>
           </ul>
-
-        <a href="basket.html">Оформить заказ</a>        
-
+          <a href="basket.html">Оформить заказ</a>
+        </div>
       </div>
 
       <div class="header-middle">
         <h1>
-          Интернет-магазин строительных материалов и инструмент для
-          ремонта
+          Интернет-магазин строительных материалов и инструмент для ремонта
         </h1>
 
         <div class="header-contacts">
           <a class="header-phone" href="tel:+7-812-555-05-55">
-            <img src="img/icons/icon-phone.svg">
-            <span>+7(812) 555-05-55</span></a>
+            <img src="img/icons/icon-phone.svg" />
+            <span>+7(812) 555-05-55</span>
           </a>
           <address>
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенская, д. 19/8
-            </p>              
+            </p>
           </address>
         </div>
 
         <div class="user">
           <ul>
             <li>
-              <a class="sign-in" href="signin.html" >
-                  <img src="img/icons/icon-login.svg">
-                  Войти
+              <a class="sign-in" href="signin.html">
+                <img src="img/icons/icon-login.svg" />
+                Войти
               </a>
             </li>
-              <a class="sign-up" href="signup.html" >
+            <li>
+              <a class="sign-up" href="signup.html">
                 Регистрация
               </a>
             </li>
@@ -72,43 +77,43 @@
       </div>
 
       <nav class="navbar">
-          <ul class="nav" >
-            <li>
-              <a href="index.html">
-                Главная
-              </a>
-            </li>
-            <li>
-              <a href="#company">
-                Компания
-              </a>
-            </li>
-            <li>
-              <a href="catalog.html">
-                Каталог
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Новости
-              </a>
-            </li>
-            <li>
-              <a href="">
-                Спецпредложения
-              </a>
-            </li>
-            <li>
-              <a href="#delivery">
-                Доставка
-              </a>
-            </li>
-            <li>
-              <a href="#contacts">
-                Контакты
-              </a>
-            </li>
-          </ul>
+        <ul class="nav">
+          <li>
+            <a href="index.html">
+              Главная
+            </a>
+          </li>
+          <li>
+            <a href="#company">
+              Компания
+            </a>
+          </li>
+          <li>
+            <a href="catalog.html">
+              Каталог
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Новости
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Спецпредложения
+            </a>
+          </li>
+          <li>
+            <a href="#delivery">
+              Доставка
+            </a>
+          </li>
+          <li>
+            <a href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
       </nav>
     </header>
 
@@ -136,43 +141,57 @@
         </h2>
       </section>
       -->
-      <section>
+      <section class="company-info">
         <h2 class="company" id="company">КОМПАНИЯ "ТЕХНОМАРТ"</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастрабайтерах.</p>
         <p>
-          Мы можем доставить ваш товар в самые отдаленные точки России! <br>
+          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+          ремонта и строительства не оставит равнодушными любителей сэкономить
+          на гастрабайтерах.
+        </p>
+        <p>
+          Мы можем доставить ваш товар в самые отдаленные точки России! <br />
           Техномарт работает со многими транспортными компаниями:
         </p>
         <ul>
           <li>
-            Деловые линии
+            <span>Деловые линии</span>
           </li>
           <li>
-            Автотрейдинг
+            <span>Автотрейдинг</span>
           </li>
           <li>
-            ЖелДорЭкспедиция
+            <span>ЖелДорЭкспедиция</span>
           </li>
-        </ul>    
-        <a href="">Подробнее о компании<>
+        </ul>
+        <a href="">Подробнее о компании</a>
       </section>
 
       <section>
         <h2 id="contacts">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a href="https://yandex.ru/maps/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;source=constructorStatic" target="_blank">
-          <img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;width=300&amp;height=158&amp;lang=ru_RU" 
-          alt="Адрес компании г. Санкт-Петербург, ул. Б. Конюшенская, д. 19/8" 
-          style="border: 0;" />
+        <a
+          href="https://yandex.ru/maps/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;source=constructorStatic"
+          target="_blank"
+        >
+          <img
+            src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;width=300&amp;height=158&amp;lang=ru_RU"
+            alt="Адрес компании г. Санкт-Петербург, ул. Б. Конюшенская, д. 19/8"
+            style="border: 0;"
+          />
         </a>
         <a href="#feedback-modal">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
       </section>
     </main>
 
     <footer>
-      <div class="footer-upper" >
+      <div class="footer-upper">
         <a href="index.html">
-          <img src="img/icons/logo.svg" width="220" height="68" alt="Логотип Техномарт">
+          <img
+            src="img/icons/logo.svg"
+            width="220"
+            height="68"
+            alt="Логотип Техномарт"
+          />
         </a>
         <ul>
           <li>
@@ -199,10 +218,10 @@
             <a href="#contacts">
               Контакты
             </a>
-          </li>  
+          </li>
         </ul>
       </div>
- 
+
       <div class="footer-middle">
         <address>
           <p>
@@ -224,40 +243,38 @@
           <li>
             <a href="">
               Инструмент
-             </a>
+            </a>
           </li>
           <li>
             <a href="">
               Спецпредложения
             </a>
           </li>
-         </ul>   
+        </ul>
       </div>
 
-      <div>
-    
       <div class="footer-bottom">
         <p>© 2010-2019 Компания "Техномарт"<br />Все права защищены</p>
         <ul>
-          <li >
+          <li>
             <a href="https://vk.com/htmlacademy" title="Группа ВК">
-            <img src="img/icons/vk-icon.svg">
+              <img src="img/icons/vk-icon.svg" />
             </a>
           </li>
-          <li >
+          <li>
             <a
               href="https://www.facebook.com/htmlacademy"
               title="Facebook Академии"
             >
-            <img src="img/icons/fb-icon.svg">
+              <img src="img/icons/fb-icon.svg" />
             </a>
           </li>
-          <li >
-            <a "
+          <li>
+            <a
               href="https://www.instagram.com/htmlacademy/"
               title="Инстаграм Академии"
             >
-            <img src="img/icons/insta-icon.svg">
+              <img src="img/icons/insta-icon.svg" />
             </a>
           </li>
         </ul>
@@ -273,11 +290,17 @@
         </p>
       </div>
     </footer>
-    <div id="feedback-modal">
+
+    <div id="feedback-modal" style="display: none;">
       <div class="map-modal">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A64896c265c43cf5536f359c263f7326f58571a2e2c4b075f2bd16aa97d7f4c12&amp;source=constructor" width="940" height="446" frameborder="0"></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A64896c265c43cf5536f359c263f7326f58571a2e2c4b075f2bd16aa97d7f4c12&amp;source=constructor"
+          width="940"
+          height="446"
+          frameborder="0"
+        ></iframe>
         <button type="button">
-          <img src="/img/icons/modal-close.svg" alt="close">
+          <img src="/img/icons/modal-close.svg" alt="close" />
         </button>
       </div>
 
@@ -285,29 +308,38 @@
         <ul>
           <li>
             <label for="name">Ваше имя:</label>
-            <input id="name" name="name" type="text" placeholder="Имя Фамилия" />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Имя Фамилия"
+            />
           </li>
           <li>
             <label for="mail">Ваш e-mail:</label>
-            <input id="mail" name="email" type="email" placeholder="email@example.com" />
+            <input
+              id="mail"
+              name="email"
+              type="email"
+              placeholder="email@example.com"
+            />
           </li>
           <li>
             <label for="text">Текст письма:</label>
-            <textarea 
-              id="text" 
-              name="text" 
+            <textarea
+              id="text"
+              name="text"
               rows="5"
-              cols="460"
+              cols="100%"
               placeholder="В свободной форме"
             ></textarea>
           </li>
         </ul>
         <button type="submit">Отправить</button>
         <button type="button">
-          <img src="/img/icons/modal-close.svg" alt="close">
+          <img src="/img/icons/modal-close.svg" alt="close" />
         </button>
       </form>
     </div>
-
   </body>
 </html>
