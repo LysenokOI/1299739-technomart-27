@@ -1,3 +1,8 @@
+@font-face{
+  font-family: "Cuprum";
+  src: url("../fonts/Cuprum-Regular.woff2") format("woff2");
+}
+
 .body {
   margin: 0;
   padding: 0;
@@ -47,10 +52,10 @@ a {
   background-color: #63a63e;
 }
 
-.header-top .icon {
-  fill: white;
-  background-color: #ffffff;
-}
+/*.header-top .icon {
+  fill: #ffffff;
+  opacity: 0.3;
+} */
 
 .navbar {
   background-color: #32425c;
