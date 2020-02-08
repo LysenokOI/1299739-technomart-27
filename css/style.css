@@ -1,9 +1,46 @@
 @font-face{
   font-family: "Cuprum";
-  src: url("../fonts/Cuprum-Regular.woff2") format("woff2");
+  src: 
+  url("/fonts/Cuprum-Regular.woff2") format("woff2"),
+  url("/fonts/Cuprum-Regular.woff") format("woff");
 }
 
-.body {
+@font-face{
+  font-family: "Cuprum-Bold";
+  src: 
+  url("/fonts/Cuprum-Bold.woff2") format("woff2"),
+  url("/fonts/Cuprum-Bold.woff") format("woff");
+}
+
+@font-face{
+  font-family: "Cuprum-Italic";
+  src: 
+  url("/fonts/Cuprum-Italic.woff2") format("woff2"),
+  url("/fonts/Cuprum-Italic.woff") format("woff");
+}
+
+@font-face{
+  font-family: "PTSans-Regular";
+  src: 
+  url("/fonts/ptsans.woff2") format("woff2"),
+  url("/fonts/ptsans.woff") format("woff");
+}
+
+@font-face{
+  font-family: "PTSans-Bold";
+  src: 
+  url("/fonts/ptsansbold.woff2") format("woff2"),
+  url("/fonts/ptsansbold.woff") format("woff");
+}
+
+@font-face{
+  font-family: "PTSans-Italic";
+  src: 
+  url("/fonts/ptsansitalic.woff2") format("woff2"),
+  url("/fonts/ptsansitalic.woff") format("woff");
+}
+
+body {
   margin: 0;
   padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
@@ -11,14 +48,13 @@
   line-height: 18px;
   font-weight: 400;
   color: #000000;
-  background-color: #eeeeee;
 }
 
 a {
   text-decoration: none;
 }
 
-.user a {
+.user .signed-in {
   text-decoration: underline;
 }
 
@@ -33,17 +69,66 @@ a {
   line-height: 18px;
 }
 
+.logo {
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  background-color: #ee3643;
+  display: inline-block;
+  width: 220px;
+  margin-top: 0px;
+  margin-left: 220px;
+}
+
+.logo-top-:hover {
+  background-color: #ca2c37;
+}
+
+.logo-top:active {
+  background-color: #ba2732;
+}
+
+
+.icon {
+  opacity: 0.3;
+  fill: white;
+}
+
+.icon-phone {
+  opacity: 1;
+}
+
 .search input {
-  background-color: #293449;
+  background-color: inherit;
   border: none;
   color: #ffffff;
 }
 
 .search ::-webkit-input-placeholder,
-.widgets a {
+.widgets a, .check-out a {
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
+}
+
+/*поменять opacity svg, при наведении на элемент li*/
+.search:hover, .widgets li:hover {
+  opacity: 1;
+  background-color: #212a3a;
+}
+
+/*поменять цвет фона при активации инпута*/
+.search input:focus {
+  background-color: white;
+  color: black;
+  outline: none;
+}
+
+.search input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.widgets li:active {
+  opacity: 0.6;
+  background-color: #161d29;
 }
 
 .check-out {
@@ -52,10 +137,13 @@ a {
   background-color: #63a63e;
 }
 
-/*.header-top .icon {
-  fill: #ffffff;
-  opacity: 0.3;
-} */
+.check-out:hover {
+  background-color: #5fbb2d;
+}
+
+.check-out:active {
+  opacity: 0.6;
+}
 
 .navbar {
   background-color: #32425c;
@@ -65,13 +153,158 @@ a {
   color: #eeeeee;
 }
 
-.logo-top {
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+h1{
+  color: #ee3643;
+  font-family: "Cuprum-Italic";
+  font-size: 16px;
+  line-height: 23px;  /* в макете высота строки 1,44. как узнать правильное значение? */
+  font-weight: 300;
+  width: 196px;
+}
+
+.header-phone {
+  border: 3px solid white;
+}
+
+.header-phone {
+  color: #ee3643;
+  font-size: 21px;
+}
+
+.header-contacts address {
+  font-family: "Cuprum";
+  font-style: normal;
+  font-size: 14px;
+}
+
+.user li {
+  background-color: white;
+  font-size: 21px;
+}
+
+.user a{
+  color: #000000;
+}
+
+/* так же изменение fil или opacity , при наведении*/
+.user a:hover {
+  opacity: none;
+  color: #ee3643;
+}
+
+.user a:active {
+  opacity: 0.3;
+}
+
+.nav a {
+  color: white;
+}
+
+.nav a:hover{
+  background: #212a3a;
+}
+
+.nav a:active{
+  background-color: #161d29;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.company-info h2, .contacts h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/*определить высоту строки 1,85)*/
+.company-info p, .contacts p {
+  font-family: "PTsans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.company-info li {
+  font-family: "Cuprum-Bold", Arial, sans-serif;
+  font-size: 18px;
+}
+
+.company-info a, .contacts a{
+  text-transform: uppercase;
+  background-color: #ee3643;
+  color: white;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #32425c;
+}
+
+.footer-upper a {
+  font-size: 17px;
+  color: #f1f5f7;
+}
+
+.footer-upper a:hover, .footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-upper a:active, .footer-nav a:active{
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.footer-contacts p, .footer-contacts a {
+  font-style: normal;
+  color: #f1f5f7;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.footer-nav a {
+  font-size: 17px;
+  color: #ffd180;
+}
+
+.footer-bottom {
+  background-color: #293449;
+}
+
+.footer-bottom p {
+  color: white;
+  font-size: 16px;
+  line-height: 1.13;
+}
+
+.footer-bottom li {
+  background-color: #212a3a;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+  text-align: center;
+}
+
+.footer-bottom svg {
+  opacity: 1;
+}
+
+.footer-bottom li:hover {
   background-color: #ee3643;
 }
 
-.logo-top img {
-  background-color: #ee3643;
+.footer-bottom li {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.feedback a, .developed a {
+  color: #ffd180;
+}
+
+.feedback a:hover, .developed a:hover {
+  text-decoration: underline;
+}
+
+.feedback a:active, .developed a:active {
+  color: #ee3643;
+  text-decoration: none;
 }
 
 .widgets ul,
@@ -84,6 +317,7 @@ a {
 .products ul {
   list-style: none;
 }
+
 
 .company-info li {
   list-style: none;
