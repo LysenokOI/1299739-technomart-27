@@ -1,43 +1,43 @@
 @font-face{
   font-family: "Cuprum";
   src: 
-  url("/fonts/Cuprum-Regular.woff2") format("woff2"),
-  url("/fonts/Cuprum-Regular.woff") format("woff");
+  url("../fonts/Cuprum-Regular.woff2") format("woff2"),
+  url("../fonts/Cuprum-Regular.woff") format("woff");
 }
 
 @font-face{
   font-family: "Cuprum-Bold";
   src: 
-  url("/fonts/Cuprum-Bold.woff2") format("woff2"),
-  url("/fonts/Cuprum-Bold.woff") format("woff");
+  url("../fonts/Cuprum-Bold.woff2") format("woff2"),
+  url("../fonts/Cuprum-Bold.woff") format("woff");
 }
 
 @font-face{
   font-family: "Cuprum-Italic";
   src: 
-  url("/fonts/Cuprum-Italic.woff2") format("woff2"),
-  url("/fonts/Cuprum-Italic.woff") format("woff");
+  url("../fonts/Cuprum-Italic.woff2") format("woff2"),
+  url("../fonts/Cuprum-Italic.woff") format("woff");
 }
 
 @font-face{
   font-family: "PTSans-Regular";
   src: 
-  url("/fonts/ptsans.woff2") format("woff2"),
-  url("/fonts/ptsans.woff") format("woff");
+  url("../fonts/ptsans.woff2") format("woff2"),
+  url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face{
   font-family: "PTSans-Bold";
   src: 
-  url("/fonts/ptsansbold.woff2") format("woff2"),
-  url("/fonts/ptsansbold.woff") format("woff");
+  url("../fonts/ptsansbold.woff2") format("woff2"),
+  url("../fonts/ptsansbold.woff") format("woff");
 }
 
 @font-face{
   font-family: "PTSans-Italic";
   src: 
-  url("/fonts/ptsansitalic.woff2") format("woff2"),
-  url("/fonts/ptsansitalic.woff") format("woff");
+  url("../fonts/ptsansitalic.woff2") format("woff2"),
+  url("../fonts/ptsansitalic.woff") format("woff");
 }
 
 body {
@@ -52,10 +52,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.user .signed-in {
-  text-decoration: underline;
 }
 
 .top {
@@ -96,30 +92,45 @@ a {
   opacity: 1;
 }
 
-.search input {
-  background-color: inherit;
-  border: none;
-  color: #ffffff;
+.icon-search {
+  position: absolute;
+  margin-left: -190px;
 }
 
-.search ::-webkit-input-placeholder,
-.widgets a, .check-out a {
+.search input {
+  background-color: #293449;
+  border: none;
+  padding-left: 49px;
+}
+
+.search input::-webkit-input-placeholder,
+.widgets a, 
+.check-out a {
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
 }
 
-/*поменять opacity svg, при наведении на элемент li*/
-.search:hover, .widgets li:hover {
+.search:hover .icon, 
+.bookmark:hover .icon,
+.cart:hover .icon {
   opacity: 1;
+}
+
+.search:hover input,
+.widgets li:hover {
   background-color: #212a3a;
 }
 
-/*поменять цвет фона при активации инпута*/
+
 .search input:focus {
   background-color: white;
   color: black;
   outline: none;
+}
+
+input:focus+svg {
+  fill: #ee3643;
 }
 
 .search input::-webkit-search-cancel-button {
@@ -155,7 +166,7 @@ a {
 
 h1{
   color: #ee3643;
-  font-family: "Cuprum-Italic";
+  font-family: "Cuprum-Italic", Arial, sans-serif;;
   font-size: 16px;
   line-height: 23px;  /* в макете высота строки 1,44. как узнать правильное значение? */
   font-weight: 300;
@@ -172,7 +183,7 @@ h1{
 }
 
 .header-contacts address {
-  font-family: "Cuprum";
+  font-family: "Cuprum", Arial, sans-serif;;
   font-style: normal;
   font-size: 14px;
 }
@@ -334,4 +345,125 @@ footer {
 
 .page-chain li::before {
   content: url(/img/icons/icon-right-small.svg);
+}
+
+/* catalog.html*/
+
+.user .signed-in {
+  text-decoration: underline;
+}
+
+.log-out {
+  background-color: white;
+  font-size: 21px;
+  line-height: 21px;
+  border: none;
+  padding: 12.5px 10px 12.5px 13px;
+}
+
+.icon-user, .icon-logout {
+  fill: #32425C;
+}
+
+.log-out:hover svg {
+  opacity: 1;
+}
+
+.log-out:active {
+  opacity: 0.3;
+}
+
+.signed-in {
+  font-size: 16px;
+  color: #32425c;
+}
+
+.bullet{
+  display: inline-block;
+    content: '';
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    height: 4px;
+    width: 4px;
+    margin-right: 13px;
+    background-color: #32425c;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-family: "PTSans-Bold", Arial, sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.filters {
+  font-family: "PTSans-Regular", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filters input[disabled="disabled"] {
+  content: url("/img/checkbox-off.svg")
+}
+
+.filters button[submit] {
+  font-family: "PTSans-Regular", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.catalog-header {
+  background-color: #f2f6f8;
+  text-transform: uppercase;
+  font-family: "PTSans-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  color: #32425c;
+}
+
+.page-chain a {
+  font-family: "PTSans-Regular", Arial, sans-serif;
+  font-size: 13px;
+  color: #000000;
+}
+
+.product-item {
+  width: 220px;
+  height: 318px;
+  border: solid 1px #e5e5e5;
+  font-family: "PTSans-Regular", Arial, sans-serif;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 18px;
+  
+}
+
+.product-discount {
+  font-size: 17px;
+  color: #999999;
+  text-decoration-line: line-through;
+}
+
+.product-price {
+  width: 141px;
+  height: 38px;
+  font-size: 17px;
+  color: #ffffff;
+  background-image: url("/img/item-button.svg");
+}
+
+.nav-product {
+  font-family: "PTSans-Regular", Arial, sans-serif;
+  font-size: 13px;
+  
+}
+
+.nav-product button {
+  text-transform: uppercase;
+  background-color: white;
 }
