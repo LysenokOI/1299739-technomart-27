@@ -75,7 +75,6 @@ body {
   flex-direction: column;
   align-items:center;
   padding-bottom: 60px;
-  margin-bottom: 23px;
   background-color: #f4f7f9;
 }
 
@@ -216,6 +215,64 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 60px;
+}
+
+.main-content {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.about-company {
+  display: flex;
+  justify-content: space-between;
+  
+  min-height: 536px;
+}
+
+.company-info {
+  width: 550px;
+}
+
+.contacts {
+  width: 300px;
+}
+
+.info-header, .contacts-header {
+  margin-top: 82px;
+  margin-bottom: 27px;
+}
+
+.company-info p, .contacts p {
+  margin-bottom: 25px;
+}
+
+.company-info ul {
+  padding: 0px;
+  margin-bottom: 29px;
+}
+
+.company-info li {
+  margin-bottom: 23px;
+}
+
+.company-info a, .contacts a:last-of-type {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+}
+
+.company-info a {
+  width: 220px;
+}
+
+.contacts-a:last-of-type {
+  width: 300px;
+}
+
+.contacts img {
+  margin-bottom: 40px;
 }
 
 /*3. Типографика*/
@@ -383,7 +440,7 @@ body {
   font-size: 18px;
 }
 
-.company-info a, .contacts a{
+.company-info a, .contacts a:last-of-type {
   text-transform: uppercase;
   background-color: #ee3643;
   color: white;
