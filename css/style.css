@@ -54,6 +54,14 @@ a {
   text-decoration: none;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 /*1. Позиционирование*/
 
 .icon-search {
@@ -87,18 +95,15 @@ body {
 
 .header-top {
   display: flex;
-  box-sizing: border-box;
   width: 940px;
-  align-items: center;
   height: 42px;
 }
 
 .header-middle {
   display: flex;
   justify-content: space-between;
-  margin-top: 46px;
-  margin-bottom: 44px;
-  box-sizing: border-box;
+  padding-top: 46px;
+  min-height: 158px;
   width: 940px;
 }
 
@@ -111,6 +116,17 @@ body {
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
   min-height: 60px;
+}
+
+.logo-top, .logo-bot {
+  display: flex;
+  width: 220px;
+}
+
+.logo-top {
+  height: 47px;
+  justify-content: center;
+  align-items: center;
 }
 
 .search {
@@ -140,18 +156,9 @@ body {
 .cart {
   display: flex;
   width: 150px;
-  box-sizing: border-box;
   padding-left: 17px;
   padding-right: 28px;
   justify-content: space-between;
-  align-items: center;
-}
-
-.logo-top {
-  display: flex;
-  width: 220px;
-  height: 47px;
-  justify-content: center;
   align-items: center;
 }
 
@@ -164,14 +171,17 @@ body {
 }
 
 .page-description {
+  margin-top: 0px;
   width: 197px;
 }
 
 .header-phone {
   display: flex;
-  padding-top: 13px;
-  padding-bottom: 10px;
+  align-items: center;
+  width: 270px;
+  min-height: 42px;
   padding-left: 15px;
+  margin-bottom: -5px;
 }
 
 .header-phone span {
@@ -204,8 +214,9 @@ body {
 }
 
 .nav {
-  box-sizing: border-box;
   width: 940px;
+  /*padding-left: 20px;
+  padding-right: 20px;*/
   justify-content: space-between;
 }
 
@@ -238,21 +249,25 @@ body {
 }
 
 .info-header, .contacts-header {
-  margin-top: 82px;
-  margin-bottom: 27px;
+  margin-top: 80px;
+  margin-bottom: 25px;
 }
 
-.company-info p, .contacts p {
+.company-info p {
   margin-bottom: 25px;
+}
+
+.contacts p {
+  margin-bottom: 34px;
 }
 
 .company-info ul {
   padding: 0px;
-  margin-bottom: 29px;
+  margin-bottom: 37px;
 }
 
 .company-info li {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 
 .company-info a, .contacts a:last-of-type {
@@ -272,7 +287,87 @@ body {
 }
 
 .contacts img {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+}
+
+.footer-upper,
+.footer-middle,
+.footer-bottom {
+  display: flex;
+  width: 940px;
+  margin: auto;
+}
+
+.footer-upper {
+  min-height: 68px;
+  justify-content: space-between;
+}
+
+.footer-middle {
+  justify-content: space-between;
+  min-height: 125px;
+}
+
+.logo-bot {
+  height: 68px;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+.nav-bot {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 42px;
+  width: 547px;
+  justify-content: space-between;
+}
+
+.footer-contacts {
+  margin-top: 28px;
+  margin-left: 2px;
+}
+
+.footer-address p {
+  margin: 0px;
+}
+
+.footer-nav {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 32px;
+  width: 524px;
+  justify-content: space-between;
+}
+
+.footer-bottom p {
+  margin: 0px;
+}
+
+.footer-bottom {
+  min-height: 107px;
+  padding-right: 15px;
+  align-items: center;
+}
+
+.social-contacts {
+  display: flex;
+  width: 132px;
+  justify-content: space-between;
+  padding: 0px;
+  margin-left: 161px;
+  margin-right: 119px;
+}
+
+.social-contacts li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback {
+  padding-right: 53px;
 }
 
 /*3. Типографика*/
@@ -379,6 +474,7 @@ body {
 }
 
 .header-phone {
+
   outline: 3px solid white;
 }
 
@@ -403,9 +499,12 @@ body {
 }
 
 .user a:hover {
-  opacity: none;
   color: #ee3643;
 }
+
+.sign-in:hover svg {
+  opacity: 1;
+} 
 
 .user a:active {
   opacity: 0.3;
@@ -424,7 +523,9 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.company-info h2, .contacts h2 {
+.info-header, .contacts-header {
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -477,7 +578,7 @@ body {
   color: #ffd180;
 }
 
-.footer-bottom {
+.footer-bottom-wrapper {
   background-color: #293449;
 }
 
