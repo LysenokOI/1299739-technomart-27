@@ -181,7 +181,11 @@ body {
   width: 270px;
   min-height: 42px;
   padding-left: 15px;
-  margin-bottom: -5px;
+  margin-bottom: 10px;
+}
+
+.header-address {
+  margin-left: 10px;
 }
 
 .header-phone span {
@@ -369,6 +373,128 @@ body {
 .feedback {
   padding-right: 53px;
 }
+
+/*catalog block model*/
+
+.catalog-main {
+  padding-bottom: 60px;
+}
+
+.log-out {
+  display: flex;
+  padding: 0px;
+  padding-left: 13px;
+  padding-right: 10px;
+  width: 299px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.user-name {
+  display: flex;
+  padding-left: 14px;
+  width: 236px;
+}
+
+.signed-in:first-of-type {
+  margin-right: 13px;
+  margin-left: 17px;
+}
+
+.page-chain {
+  display: flex;
+  min-height: 59px;
+  align-items: center;
+}
+
+.chain-items {
+  padding: 0px;
+  display: flex;
+}
+
+.chain-page {
+  margin-left: 15px;
+}
+
+.catalog-header {
+  padding: 32px;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+}
+
+.filters-bar {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.fieldset-wrapper {
+  padding-top: 25px;
+}
+
+.filters-field {
+  margin: 0px;
+  padding: 0px;
+}
+
+.filter-producer,
+.filter-power {
+  padding: 0px;
+}
+
+.filter-producer li,
+.filter-power li {
+  margin-bottom: 17px;
+}
+
+.filters-button {
+  margin-top: 75px;
+}
+
+.products-list {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  justify-content: space-between;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  height: 318px;
+  margin-bottom: 21px;
+  align-items: center;
+}
+
+.product-title {
+  margin-top: 12px;
+  margin-bottom: 18px;
+  display: flex;
+  width: 158px;
+  text-align: center;
+}
+
+.product-discount {
+  display: flex;
+  margin: 0px;
+  margin-bottom: 13px;
+}
+
+.product-price {
+  display: flex;
+  width: 122px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  /*justify-self: end; не работает */ 
+}
+
 
 /*3. Типографика*/
 
@@ -649,20 +775,21 @@ body {
 
 .chain-page::before {
   content: url("../img/icons/icon-right-small.svg");
+  margin-right: 15px;
 }
 
 /* catalog.html*/
 
-.user .signed-in {
+.signed-in {
   text-decoration: underline;
 }
 
 .log-out {
+  font-family: "Cuprum-Bold", Arial, sans-serif ;
   background-color: white;
   font-size: 21px;
   line-height: 21px;
   border: none;
-  padding: 12.5px 10px 12.5px 13px;
 }
 
 .icon-user, .icon-logout {
@@ -693,6 +820,10 @@ body {
     background-color: #32425c;
 }
 
+.fieldset-wrapper {
+  border-top: 1px solid #e5e5e5;
+}
+
 .filters fieldset {
   border: none;
 }
@@ -714,9 +845,12 @@ body {
   content: url("/img/checkbox-off.svg")
 }
 
-.filters button[submit] {
+.filters-button {
   font-family: "PTSans-Regular", Arial, sans-serif;
   font-size: 13px;
+  width: 140px;
+  height: 38px;
+  background-color: #ffffff;
 }
 
 .catalog-header {
