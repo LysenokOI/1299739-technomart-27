@@ -63,14 +63,14 @@ html {
 }
 
 /*1. Позиционирование*/
-
-.icon-search {
-  position: absolute;
-  margin-left: 17px;
+.new-product {
+  position: relative;
 }
 
-.search input {
-  padding-left: 49px;
+.new-product::before {
+  content: url("../img/new-flag.png");
+  position: absolute;
+  right: 0px;
 }
 
 /*2. Блочная модель*/
@@ -127,6 +127,15 @@ body {
   height: 47px;
   justify-content: center;
   align-items: center;
+}
+
+.icon-search {
+  position: absolute;
+  margin-left: 17px;
+}
+
+.search input {
+  padding-left: 49px;
 }
 
 .search {
@@ -492,7 +501,7 @@ body {
   height: 38px;
   justify-content: center;
   align-items: center;
-  /*justify-self: end; не работает */ 
+  
 }
 
 
