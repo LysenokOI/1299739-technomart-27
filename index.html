@@ -173,7 +173,7 @@
           Мы можем доставить ваш товар в самые отдаленные точки России! <br />
           Техномарт работает со многими транспортными компаниями:
         </p>
-        <ul>
+        <ul class="trans-companies">
           <li>
             <span>Деловые линии</span>
           </li>
@@ -196,7 +196,7 @@
             src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A3cfbcc2ca3a15aba32d3fce82f06ec4c0c88834dbc340e095f4dc6d5b2f83fc5&amp;width=300&amp;height=158&amp;lang=ru_RU"
             alt="Адрес компании г. Санкт-Петербург, ул. Б. Конюшенская, д. 19/8" style="border: 0;" />
         </a>
-        <a href="#feedback-modal">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
+        <a href="#feedback-modal-container">ЗАБЛУДИЛИСЬ? НАПИШИТЕ НАМ!</a>
       </section>
 
     </div>
@@ -317,37 +317,46 @@
     </div>
   </footer>
 
-  <div id="feedback-modal" style="display: none;">
+  <div id="map-modal-container" class="map-modal-container">
     <div class="map-modal">
       <iframe
         src="https://yandex.ru/map-widget/v1/?um=constructor%3A64896c265c43cf5536f359c263f7326f58571a2e2c4b075f2bd16aa97d7f4c12&amp;source=constructor"
         width="940" height="446" frameborder="0"></iframe>
-      <button type="button">
+      <a href="#close" title="close" class="close">
         <img src="/img/icons/modal-close.svg" alt="close" />
-      </button>
+      </a>
     </div>
-
-    <form action="" method="post">
-      <ul>
-        <li>
-          <label for="name">Ваше имя:</label>
-          <input id="name" name="name" type="text" placeholder="Имя Фамилия" />
-        </li>
-        <li>
-          <label for="mail">Ваш e-mail:</label>
-          <input id="mail" name="email" type="email" placeholder="email@example.com" />
-        </li>
-        <li>
-          <label for="text">Текст письма:</label>
-          <textarea id="text" name="text" rows="5" cols="100%" placeholder="В свободной форме"></textarea>
-        </li>
-      </ul>
-      <button type="submit">Отправить</button>
-      <button type="button">
-        <img src="/img/icons/modal-close.svg" alt="close" />
-      </button>
-    </form>
   </div>
+
+  <div id="feedback-modal-container" class="feedback-modal-container">
+    <div class="feedback-modal">
+      <form action="" method="post">
+        <ul>
+          <li class="modal-name">
+            <label for="name">Ваше имя:</label>
+            <input id="name" name="name" type="text" placeholder="Имя Фамилия" />
+          </li>
+          <li class="modal-mail">
+            <label for="mail">Ваш e-mail:</label>
+            <input id="mail" name="email" type="email" placeholder="email@example.com" />
+          </li>
+          <li class="modal-text">
+            <label for=" text">Текст письма:</label>
+            <textarea id="text" name="text" style="width: 460px; height: 114px"
+              placeholder="В свободной форме"></textarea>
+          </li>
+        </ul>
+        <div class="modal-button-wrapper">
+          <button type="submit" class="modal-send">Отправить</button>
+        </div>
+
+        <a href="#close" title="close" class="close">
+          <img src="/img/icons/modal-close.svg" alt="close" />
+        </a>
+      </form>
+    </div>
+  </div>
+
 </body>
 
 </html>
