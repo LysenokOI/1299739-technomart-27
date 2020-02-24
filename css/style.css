@@ -111,10 +111,11 @@ body {
 
 .header-middle {
   display: flex;
+  width: 940px;
   justify-content: space-between;
   padding-top: 46px;
   min-height: 158px;
-  width: 940px;
+
 }
 
 .page-description {
@@ -123,8 +124,18 @@ body {
 
 .navbar {
   display: flex;
+  width: 940px;
+  justify-content: space-between;
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
+  min-height: 60px;
+}
+
+.navbar a {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
   min-height: 60px;
 }
 
@@ -159,16 +170,19 @@ body {
 }
 
 .list-widgets,
-.list-user,
-.nav {
+.user {
   display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+}
+
+.user {
+  height: 45px;
 }
 
 .list-widgets {
   height: 42px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .bookmark,
@@ -190,7 +204,7 @@ body {
 }
 
 .page-description {
-  margin-top: 0px;
+  margin-top: 3px;
   width: 197px;
 }
 
@@ -198,9 +212,9 @@ body {
   display: flex;
   align-items: center;
   width: 270px;
-  min-height: 42px;
-  padding-left: 15px;
-  margin-bottom: 10px;
+  min-height: 43px;
+  padding-left: 12px;
+  margin-bottom: 3px;
 }
 
 .header-address {
@@ -208,15 +222,15 @@ body {
 }
 
 .header-phone span {
-  margin-left: 40px;
+  margin-left: 38px;
 }
 
-.list-user li {
+.user a {
   padding-top: 14px;
   padding-bottom: 14px;
 }
 
-.list-user li:last-child {
+.user a:last-child {
   margin-left: 10px;
 }
 
@@ -234,21 +248,6 @@ body {
 .icon-signin {
   margin-left: 14px;
   margin-right: 14px;
-}
-
-.nav {
-  width: 940px;
-  /*padding-left: 20px;
-  padding-right: 20px;*/
-  justify-content: space-between;
-}
-
-.nav li {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  min-height: 60px;
 }
 
 .main-content {
@@ -386,7 +385,11 @@ body {
 .social-contacts li {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 10px;
+}
+
+.social-contacts li:first-of-type {
+  padding-top: 13px;
 }
 
 .feedback {
@@ -439,7 +442,6 @@ body {
   padding: 32px;
   margin: 0px;
   margin-bottom: 20px;
-  border-bottom-left-radius: ;
 }
 
 .products {
@@ -595,6 +597,10 @@ body {
   background-color: #212a3a;
 }
 
+.widgets li:hover {
+  cursor: default;
+}
+
 
 .search-input:focus {
   background-color: white;
@@ -631,7 +637,6 @@ body {
 .navbar {
   font-size: 17px;
   line-height: 17px;
-  color: #eeeeee;
 }
 
 .page-description{
@@ -643,8 +648,7 @@ body {
 }
 
 .header-phone {
-
-  outline: 3px solid white;
+  border: 3px solid white;
 }
 
 .header-phone {
@@ -656,9 +660,10 @@ body {
   font-family: inherit;
   font-style: normal;
   font-size: 14px;
+  line-height: 24px;
 }
 
-.user li {
+.user a {
   background-color: white;
   font-size: 21px;
 }
@@ -679,17 +684,25 @@ body {
   opacity: 0.3;
 }
 
-.nav a {
+.navbar a {
   color: white;
 }
 
-.nav li:hover{
+.navbar a:hover{
   background: #212a3a;
 }
 
-.nav li:active{
+.navbar a:active{
   background-color: #161d29;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-main {
+  padding-left: 21px;
+}
+
+.nav-contacts {
+  padding-right: 25px;
 }
 
 .info-header, .contacts-header {
@@ -710,12 +723,24 @@ body {
   font-size: 18px;
 }
 
-.company-info a, .contacts a:last-of-type {
+.company-info a, 
+.contacts a:last-of-type {
   text-transform: uppercase;
   background-color: #ee3643;
   color: white;
   font-size: 14px;
 }
+
+.company-info a:hover, 
+.contacts a:last-of-type:hover {
+  background-color: #ca2c37
+}
+
+.company-info a:active, 
+.contacts a:last-of-type:active{
+  background-color: #ba2732;
+}
+
 
 .footer {
   background-color: #32425c;
@@ -726,16 +751,19 @@ body {
   color: #f1f5f7;
 }
 
-.footer-upper a:hover, .footer-nav a:hover {
+.footer-upper a:hover, 
+.footer-nav a:hover {
   text-decoration: underline;
 }
 
-.footer-upper a:active, .footer-nav a:active{
+.footer-upper a:active, 
+.footer-nav a:active{
   opacity: 0.5;
   text-decoration: none;
 }
 
-.footer-address, .footer-phone {
+.footer-address, 
+.footer-phone {
   font-style: normal;
   color: #f1f5f7;
   font-size: 18px;
@@ -792,8 +820,6 @@ body {
 }
 
 .widgets ul,
-.user ul,
-.nav,
 .footer-upper ul,
 .footer-middle ul,
 .footer-bottom ul,
@@ -842,7 +868,7 @@ body {
 }
 
 .log-out {
-  font-family: "Cuprum-Bold", Arial, sans-serif ;
+  font-family: "Cuprum", Arial, sans-serif ;
   background-color: white;
   font-size: 21px;
   line-height: 21px;
@@ -1138,6 +1164,7 @@ body {
 
 .modal-text textarea {
   padding-top: 9px;
+  resize: none;
 }
 
 .modal-name input,
